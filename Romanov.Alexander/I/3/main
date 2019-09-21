@@ -1,0 +1,106 @@
+public statis void main () {
+
+import add;
+import withdraw;
+import transfer;
+
+scanner = new Scanner();
+
+String operation;
+String accountto;
+String accountfrom;
+int amount;
+boolean accept;
+
+currentoperation = new operation();
+currentaccountto = new accountto();
+currentaccountfrom = new accountfrom();
+currentamount = new amount();
+
+
+while (operation == 1 | 2 | 3) {
+	// Вывести приветствие с запросом типа операции
+	System.out.println("Выберите действие:\n 1. Пополнение \n 2. Снятие \n 3. Перевод \n "(введите число от 1 до 3)"");
+
+	//считать ответ
+	operation = scanner.NextString();
+
+	if (operation != 1 | 2 | 3) {
+		System.out.print("Введите корректный вариант");
+	}
+}
+
+if (operation == 1 || 3) {
+
+	while (currentaccountto == 1 | 2 | 3) {
+		// предложить выбор счета пополнения
+		System.out.println("Выберите счет для пополнения:\n 1. Текущий \n 2. Дебетовый \n 3. Кредитный");
+
+		currentaccountto = scanner.NextString();
+
+		if (currentaccountto != 1 | 2 | 3) {
+			System.out.print("Введите корректный вариант");
+		}
+	}
+
+}
+
+else if (operation == 3 || 2) {
+	while (accept == true) {
+	// предложить выбор счета снятия
+	System.out.println("Выберите счет для списания:\n 1. Текущий \n 2. Дебетовый \n 3. Кредитный");
+
+	currentaccountfrom = scanner.NextString();
+
+	if (currentaccountfrom == currentaccountto) {
+		System.out.println("Выберите другой счет");
+	}
+
+	if (currentaccountfrom != 1 | 2 | 3) {
+		System.out.print("Введите корректный вариант");
+	}
+	
+	else accept = true;
+	
+}
+}
+
+
+accept = false;
+
+while (accept == true) {
+	// предложить ввести сумму
+	System.out.println("Введите сумму операции (не более 10 млн. руб.):");
+
+	currentamount = scanner.NextInt();
+
+	if (currentamount != int || currentamount > abs(10000000)) {
+		System.out.print("Введите корректную сумму");
+	}
+	else accept = true;
+}
+
+
+//направить на исполнение нужного класса
+
+if (operation = 1) {
+	add (currentamount; currentaccountto);
+
+	System.out.println("Ваш баланс:" + accountbalance);
+}
+
+if (operation = 2) {
+	withdraw (currentamount; currentaccountfrom);
+	
+	System.out.println("Ваш баланс:" + accountbalance);
+}
+
+if (operation = 3) {
+	transfer (currentamount; currentaccountfrom; currentaccountto);
+	
+	System.out.println("Баланс счета списания:" + accountbalancefrom +\n "Баланс счета пополнения:" + accountbalanceto);
+}
+
+System.out.println("Спасибо за визит!");
+
+}

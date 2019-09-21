@@ -1,0 +1,48 @@
+﻿import java.util.Scanner;
+import java.util.Random;
+import static java.lang.Math.abs;
+
+public class WarmCold {
+    private Scanner scanner = new Scanner(System.in);
+    private Random rnd = new Random(System.currentTimeMillis());
+
+    private int keynumber = rnd.nextInt(1000);
+
+    int input;
+    private int olddistance = 0;
+    int newdistance = 1000;
+
+    System.out.println("Число загадано. Введите вашу гипотезу:")
+
+    While (input==keynumber) {
+        input = scanner.nextInt();
+
+        int newdistance = abs(keynumber - input);
+
+        if (input == keynumber) {
+            System.out.println("Успех");
+            break;
+        }
+
+        else {
+            if (olddistance==0) {
+                System.out.println(" ");
+            }
+
+        }
+
+        if (olddistance > newdistance) {
+            System.out.print("горячо");
+        }
+
+        if (olddistance < newdistance)
+            System.out.print("холодно");
+
+        olddistance = newdistance;
+
+
+    }
+
+
+
+}

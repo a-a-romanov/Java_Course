@@ -1,0 +1,11 @@
+//2. операция снятия
+public static withdraw (amount, accountfrom) {
+	int withdrawamount;
+	String accountfrom;
+	public accountbalance;
+	
+	accountbalance = accountbalance - withdrawamount;
+	
+	return accountbalance;
+}
+	

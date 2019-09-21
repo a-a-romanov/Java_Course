@@ -1,0 +1,15 @@
+//3. операция перевода
+
+public static class transfer {
+	int transferamount;
+	String accountfrom;
+	String accountto;
+	int accountbalancefrom;
+	int accountbalanceto;
+	
+	accountbalancefrom = accountbalancefrom - transferamount;
+	accountbalanceto = accountbalanceto + transferamount;
+	
+	return accountbalancefrom;
+	return accountbalanceto;
+}

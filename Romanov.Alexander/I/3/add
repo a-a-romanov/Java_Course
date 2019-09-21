@@ -1,0 +1,12 @@
+//1. Операция пополнения
+public static add (amount; accountto) {
+	int addamount;
+	String accountto;
+	public int accountbalance;
+
+	addamount = amount;
+	
+	accountbalance = accountbalance + addamount;
+
+	return accountbalance;
+}
