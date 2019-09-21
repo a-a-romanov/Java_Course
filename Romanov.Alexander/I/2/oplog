@@ -1,5 +1,0 @@
-public static oplog;
-
-opdict = new opdict();
-
-issuer = new issuer();
